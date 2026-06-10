@@ -258,3 +258,13 @@ footer {
 img {
     border-radius: 5px;
 }
+
+#tel {
+    font-size: 20px;
+    text-wrap: none;
+    text-align: end;
+}
+
+#open_times {
+    font-weight: bold;
+}
