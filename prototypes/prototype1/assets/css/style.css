@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 55px;
+    text-wrap: auto;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+}
+
+header img {
+    width: 100px;
+    height: auto;
+    margin: 20px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(23, 181, 23);
+    padding: 10px 20px;
+}
+
+
+#introduction_title {
+    margin-top: 50px;
+    margin-left: 30px;
+    width: 80%;
+    color: #333;
+
+}
+
+#introduction_container {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 600px;
+    gap: 20px;
+}
+
+#introduction_image {
+    width: 500px;
+    height: auto;
+    padding: 10px;
+    grid-column: 1 / -1;
+    grid-row: 1;
+
+
+}
+
+#introduction_image img {
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+#introduction_info {
+    grid-column: 1 / -1;
+    grid-row: 2;
+
+}
+
+.intersection {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(116, 247, 116);
+    padding: 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+
+.link {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+#image_gallery {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    margin: 50px;
+    border: 1px solid #ccc;
+    height: 500px;
+
+}
+
+#image_gallery img {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#slideshow {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    overflow: hidden;
+}
+
+.small_image {
+    overflow: hidden;
+}
+
+#small_image1 {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#small_image2 {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+#small_image3 {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#small_image4 {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+#main_content {
+    text-align: center;
+    margin: 80px;
+}
+
+h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 40px;
+    padding: 50px;
+
+}
+
+.main_info {
+    font-size: 20px;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.diensten_image {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#reviews {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.review_card {
+    margin-left: 50px;
+    background-color: rgb(227, 231, 236);
+    border-radius: 5px;
+    gap: 50px;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-row: 1fr auto;
+    width: 500px;
+    min-height: 300px;
+    height: auto;
+}
+
+.profile_picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 20px;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.profile_picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile_name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 30px;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.profile_review {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left: 20px;
+    grid-column: 1/3;
+    grid-row: 2;
+    padding: 10px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.sub_title {
+    margin: 80px;
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.contact_input {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.contact_button {
+    padding: 10px 20px;
+    background-color: rgb(23, 181, 23);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: rgb(23, 181, 23);
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+img {
+    border-radius: 5px;
+}
+
+#tel {
+    font-size: 20px;
+    text-wrap: none;
+    text-align: end;
+}
+
+#open_times {
+    font-weight: bold;
+}
