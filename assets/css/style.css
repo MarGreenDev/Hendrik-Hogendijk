@@ -99,6 +99,19 @@ footer #open_dates {
   display: none;
 }
 
+#diensten-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 30px;
+}
+
+.dienst {
+  grid-column: 1fr;
+  justify-items: center;
+  padding: 30px;
+  line-height: 30px;
+}
+
 @media (max-width: 965px) {
   header h1 {
     font-size: 1.5rem;
@@ -111,5 +124,8 @@ footer #open_dates {
        object-fit: contain;
     width: 70%;
     height: auto;
+  }
+  #diensten-container {
+    grid-template-columns: 1fr;
   }
 }/*# sourceMappingURL=style.css.map */
