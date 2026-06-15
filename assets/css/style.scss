@@ -90,13 +90,31 @@ footer {
 
 }
 
+#slideshow {
+    background-color: $secondary-color;
+    // padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    color: white;
+    border-radius: 20px;
+    width: 40%;
+}
+
+#slideshow h2 {
+    text-align: center;
+}
+
 .foto-slideshow-container {
     display: flex;
+    justify-content: center;
     
 }
 
 .foto-slideshow-container img{
     height: 300px;
+    padding: 20px;
 }
 
 .mySlides {
@@ -110,6 +128,14 @@ footer {
             font-size: 1.5rem;
         }
     }
+    #slideshow {
+        width: 80%;
+    }
 
+    .foto-slideshow-container img {
+        object-fit: contain;
+        width: 70%;
+        height: auto;
+    }
 
 }
