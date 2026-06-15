@@ -99,6 +99,18 @@ footer #open_dates {
   display: none;
 }
 
+h2 {
+  font-size: 32px;
+}
+
+.h2-banner {
+  background-color: #0C6D3C;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 32px;
+}
+
 #diensten-container {
   display: grid;
   grid-template-columns: 1fr 1fr;

@@ -1,3 +1,4 @@
+<h2 class="h2-banner">Diensten</h2>
 <div id="diensten-container">
     <div class="dienst">
         <div>
@@ -17,14 +18,14 @@
         <div>
         <img src="assets/images/icon-tuinontwerp.png" alt="icoon tuinontwerp">
         </div>
-        <h3>tuinontwerp</h3>
+        <h3>Tuinontwerp</h3>
         <p>Een mooie tuin valt of staat bij een goed tuinontwerp. Als het op ontwerpen aankomt, maakt Hendrik Hogendijk het verschil.</p>
     </div>
     <div class="dienst">
         <div>
         <img src="assets/images/icon-zwemvijvers.png" alt="icoon zwemvijvers">
         </div>
-        <h3>zwemvijvers</h3>
+        <h3>Zwemvijvers</h3>
         <p>Zwemvijvers, is één van mijn grootste passies. En gelukkig, ze winnen aan steeds meer populariteit, waardoor ik er veel ervaring mee heb opgebouwd. </p>
     </div>
 </div>
