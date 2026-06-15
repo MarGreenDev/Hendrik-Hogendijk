@@ -18,6 +18,7 @@ header {
     gap: 15px;
     padding: 10px;
     color: #FFFDF5;
+    margin-bottom: 20px;
 
 
     .phone_number {
@@ -31,9 +32,8 @@ header {
         gap: 8px;
 
         img {
-            width: 40px;
+            width: 30px;
             height: auto;
-            border-radius: 0;
             margin-left: 0;
         }
 
@@ -64,11 +64,11 @@ footer {
     align-items: center;
     padding: 10px;
     color: #FFFDF5;
+    margin-top: 20px;
 
     img {
-        width: 40px;
+        width: 30px;
         height: auto;
-        border-radius: 0;
         margin-left: 0;
     }
 
