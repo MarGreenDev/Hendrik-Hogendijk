@@ -1,4 +1,4 @@
-var slideIndex = 0;
+var fotoIndex = 0;
 carousel();
 
 function carousel() {
@@ -10,11 +10,11 @@ function carousel() {
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
-  slideIndex++;
-  if (slideIndex > x.length) {
-    slideIndex = 1;
+  fotoIndex++;
+  if (fotoIndex > x.length) {
+    fotoIndex = 1;
   }
 
-  x[slideIndex - 1].style.display = "block";
+  x[fotoIndex - 1].style.display = "block";
   setTimeout(carousel, 5000); //verander foto elke 2 seconden
 }

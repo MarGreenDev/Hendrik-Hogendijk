@@ -220,21 +220,22 @@ h2 {
   }
   #diensten-container {
     grid-template-columns: 1fr;
-  .review_container {
+  }
+  #diensten-container .review_container {
     width: 80%;
     min-height: 250px;
   }
-  .review_card {
+  #diensten-container .review_card {
     width: 90%;
   }
-  .next {
+  #diensten-container .next {
     right: 0px;
   }
-  .prev {
+  #diensten-container .prev {
     left: 0px;
   }
 }
-@media (max-width: 570px) {
+@media (max-width: 965px) and (max-width: 570px) {
   .review_container {
     width: 90%;
     min-height: 200px;
