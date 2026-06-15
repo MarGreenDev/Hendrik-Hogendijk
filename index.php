@@ -1,6 +1,9 @@
 <?php
 include 'includes/header.php'
     ?>
+<?php
+include 'includes/nav-bar.php'
+    ?>
 
 <!-- slideshow -->
 <?php include 'includes/foto-slideshow.php' ?>
