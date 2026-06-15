@@ -1,3 +1,7 @@
+html {
+  font-size: 18px;
+}
+
 body {
   margin: 0px;
   font-family: Arial, Helvetica, sans-serif;
@@ -42,6 +46,83 @@ header h1 {
   font-size: 2.5rem;
 }
 
+.review_container {
+  padding: 30px 30px;
+  display: flex;
+  width: 60%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 300px;
+}
+
+.review_card {
+  width: 50%;
+  border-radius: 20px;
+  background: rgba(206, 200, 200, 0.781);
+  display: grid;
+  grid-template-rows: 1fr 5fr;
+}
+
+.review_slide {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+}
+
+.review_slide.active {
+  display: flex;
+}
+
+.username {
+  justify-self: center;
+  font-weight: bold;
+  grid-row: 1;
+  padding-top: 20px;
+}
+
+.review_text {
+  padding: 10px;
+  grid-row: 2;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: #0C6D3C;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  justify-self: center;
+}
+
+.next {
+  right: 60px;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: 60px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.688);
+  border-radius: 5px;
+}
+
 footer {
   background-color: #0C6D3C;
   display: flex;
@@ -73,5 +154,39 @@ footer #open_dates {
 @media (max-width: 965px) {
   header h1 {
     font-size: 1.5rem;
+  }
+  .review_container {
+    width: 80%;
+    min-height: 250px;
+  }
+  .review_card {
+    width: 90%;
+  }
+  .next {
+    right: 0px;
+  }
+  .prev {
+    left: 0px;
+  }
+}
+@media (max-width: 570px) {
+  .review_container {
+    width: 90%;
+    min-height: 200px;
+    padding: 20px 10px;
+  }
+  .review_card {
+    width: 90%;
+  }
+  .next {
+    right: 0px;
+  }
+  .prev {
+    left: 0px;
+  }
+  .prev,
+  .next {
+    padding: 12px;
+    font-size: 16px;
   }
 }/*# sourceMappingURL=style.css.map */
