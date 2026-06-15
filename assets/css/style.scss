@@ -90,6 +90,19 @@ footer {
 
 }
 
+.foto-slideshow-container {
+    display: flex;
+    
+}
+
+.foto-slideshow-container img{
+    height: 300px;
+}
+
+.mySlides {
+    display: none;
+}
+
 
 @media (max-width: 965px) {
     header {
