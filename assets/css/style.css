@@ -39,7 +39,7 @@ header img {
   margin-left: 10px;
 }
 header h1 {
-  font-size: 15px;
+  font-size: 2.5rem;
 }
 
 footer {
@@ -68,4 +68,10 @@ footer .phone_section {
 }
 footer #open_dates {
   font-weight: bold;
+}
+
+@media (max-width: 965px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
 }/*# sourceMappingURL=style.css.map */

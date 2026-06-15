@@ -50,7 +50,7 @@ header {
     }
 
     h1 {
-        font-size: 15px;
+        font-size: 2.5rem;
     }
 
 }
@@ -90,5 +90,13 @@ footer {
 
 }
 
-// alle waarden die voor desktop zijn staan hierna.
-@media (min-width: 768px) {}
+
+@media (max-width: 965px) {
+    header {
+        h1 {
+            font-size: 1.5rem;
+        }
+    }
+
+
+}
