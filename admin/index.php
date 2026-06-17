@@ -26,10 +26,8 @@
 
         <div class="modal-overlay" id="addModal">
             <div class="modal">
-                <h2 id="modalTitel">Nieuwe review toevoegen</h2>
-                <form action="voeg_toe.php" method="POST" id="modalForm">
-                    <input type="hidden" name="id" id="modal_id">
-
+                <h2>Nieuwe review toevoegen</h2>
+                <form action="add_review.php" method="POST">
                     <label for="naam">Naam</label>
                     <input type="text" id="naam" name="naam" required>
 
@@ -37,7 +35,7 @@
                     <textarea id="bericht" name="bericht" rows="4" required></textarea>
 
                     <div class="modal-buttons">
-                        <button type="submit" class="btn btn-edit" id="modalSubmit">Versturen</button>
+                        <button type="submit" class="btn btn-edit">Versturen</button>
                         <button type="button" class="btn btn-delete" id="closeModal">Annuleren</button>
                     </div>
                 </form>
@@ -66,11 +64,7 @@
                         <td><?php echo $row['naam']; ?></td>
                         <td><?php echo $row['bericht']; ?></td>
                         <td>
-                            <a href="update.php?id=<?php echo $row['id']; ?>" class="btn btn-edit bewerkBtn" data-id="<?php echo $row['id']; ?>"
-                                data-naam="<?php echo htmlspecialchars($row['naam']); ?>"
-                                data-bericht="<?php echo htmlspecialchars($row['bericht']); ?>">
-                                Bewerk
-                            </a>
+                            <a href="bewerk.php?id=<?php echo $row['id']; ?>" class="btn btn-edit">Bewerk</a>
                             <a href="verwijder.php?id=<?php echo $row['id']; ?>" class="btn btn-delete">Verwijder</a>
                         </td>
                     </tr>
@@ -85,46 +79,16 @@
 
     <script>
         const modal = document.getElementById('addModal');
-        const modalTitel = document.getElementById('modalTitel');
-        const modalForm = document.getElementById('modalForm');
-        const modalSubmit = document.getElementById('modalSubmit');
 
-        // add knop - leeg formulier
         document.getElementById('openModal').addEventListener('click', () => {
-            modalTitel.textContent = 'Nieuwe review toevoegen';
-            modalForm.action = 'voeg_toe.php';
-            modalSubmit.textContent = 'Versturen';
-
-            // velden leegmaken
-            document.getElementById('modal_id').value = '';
-            document.getElementById('naam').value = '';
-            document.getElementById('bericht').value = '';
-
             modal.classList.add('actief');
         });
 
-        // bewerk knoppen - formulier vooraf invullen
-        document.querySelectorAll('.bewerkBtn').forEach(knop => {
-            knop.addEventListener('click', (e) => {
-                e.preventDefault();
-
-                modalTitel.textContent = 'Review bewerken';
-                modalSubmit.textContent = 'Opslaan';
-
-                // velden invullen met bestaande data
-                document.getElementById('modal_id').value = knop.dataset.id;
-                document.getElementById('naam').value = knop.dataset.naam;
-                document.getElementById('bericht').value = knop.dataset.bericht;
-
-                modal.classList.add('actief');
-            });
-        });
-
-        // sluiten
         document.getElementById('closeModal').addEventListener('click', () => {
             modal.classList.remove('actief');
         });
 
+        // sluit ook als je buiten het venster klikt
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
                 modal.classList.remove('actief');
