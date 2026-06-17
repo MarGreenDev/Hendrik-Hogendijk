@@ -130,6 +130,7 @@ footer {
   padding: 10px;
   color: #FFFDF5;
   margin-top: 20px;
+  bottom: 0;
 }
 footer img {
   width: 30px;
@@ -189,6 +190,13 @@ h2 {
   text-align: center;
   padding: 20px;
   font-size: 32px;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+#contact-banner {
+  margin-top: 40px;
 }
 
 #diensten-container {
@@ -253,6 +261,55 @@ nav {
   font-weight: bold;
 }
 
+.contact-introduction {
+  width: 60%;
+  padding-top: 40px;
+  margin: 0 auto;
+}
+
+#content-form-container {
+  display: flex;
+  width: 100%;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+#contact-information {
+  margin-right: 50px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form {
+  border: #239750 solid 2px;
+  border-radius: 5px;
+  margin: 10px;
+  width: 200%;
+}
+
+#submit-button {
+  border-radius: 5px;
+  background-color: #239750;
+}
+
+@media (max-width: 1160px) {
+  #content-form-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .form {
+    width: 100%;
+    margin-right: 30px;
+  }
+  #contact-information {
+    margin-right: 30px;
+  }
+}
 @media (max-width: 500px) {
   #about_container {
     display: flex;
