@@ -70,6 +70,14 @@ header {
     font-style: italic;
 }
 
+.span1 {
+    align-self: baseline;
+}
+
+.span2 {
+    align-self: flex-end;
+}
+
 .review_container {
     padding: 30px 30px;
     display: flex;
