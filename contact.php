@@ -23,11 +23,11 @@ include 'includes/nav-bar.php'
     </div>
 
     <div id="contact-form">
-        <form action="#">
-            <input type="text" name="naam" placeholder="vul je naam in" class="form">
-            <input type="email" name="email" placeholder="vul je email in" class="form">
-            <input type="tel" name="phone-number" placeholder="telefoon nummer" class="form">
-            <textarea placeholder="vul uw bericht in" class="form"></textarea>
+        <form action="contact_verwerk.php" method="post">
+            <input type="text" name="naam" placeholder="vul je naam in" class="form" required>
+            <input type="email" name="email" placeholder="vul je email in" class="form" required>
+            <input type="tel" name="phone-number" placeholder="telefoon nummer" class="form" required>
+            <textarea name="message" placeholder="vul uw bericht in" class="form" required></textarea>
             <input type="submit" name="submit" placeholder="verzenden" id="submit-button">
         </form>
     </div>
