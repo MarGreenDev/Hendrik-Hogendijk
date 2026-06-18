@@ -1,6 +1,10 @@
 $primary-color: #0C6D3C;
 $secondary-color: #239750;
 
+html {
+    font-size: 18px;
+}
+
 // alle waarden die voor grotes zijn voor de media query zijn voor op telefoon
 body {
     margin: 0px;
@@ -18,7 +22,7 @@ header {
     gap: 15px;
     padding: 10px;
     color: #FFFDF5;
-    margin-bottom: 20px;
+
 
 
     .phone_number {
@@ -55,7 +59,80 @@ header {
 
 }
 
+.review_container {
+    padding: 30px 30px;
+    display: flex;
+    width: 60%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: 300px;
+}
 
+.review_card {
+    width: 50%;
+    border-radius: 20px;
+    background: rgba(206, 200, 200, 0.781);
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+}
+
+.review_slide {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+}
+
+.review_slide.active {
+    display: flex;
+}
+
+.username {
+    justify-self: center;
+    font-weight: bold;
+    grid-row: 1;
+    padding-top: 20px;
+}
+
+.review_text {
+    padding: 10px;
+    grid-row: 2;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: $primary-color;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    justify-self: center;
+}
+
+.next {
+    right: 60px;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 60px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.688);
+    border-radius: 5px;
+}
 
 footer {
     background-color: $primary-color;
@@ -65,6 +142,7 @@ footer {
     padding: 10px;
     color: #FFFDF5;
     margin-top: 20px;
+    bottom: 0;
 
     img {
         width: 30px;
@@ -90,13 +168,278 @@ footer {
 
 }
 
+#slideshow {
+    background-color: $secondary-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    color: white;
+    border-radius: 20px;
+    width: 40%;
+}
 
-@media (max-width: 965px) {
-    header {
-        h1 {
-            font-size: 1.5rem;
+#slideshow h2 {
+    text-align: center;
+}
+
+.foto-slideshow-container {
+    display: flex;
+    justify-content: center;
+
+}
+
+.foto-slideshow-container img {
+    height: 300px;
+    padding: 20px;
+}
+
+.mySlides {
+    display: none;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+.h2-banner {
+    background-color: #0C6D3C;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 32px;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+#contact-banner {
+    margin-top: 40px;
+}
+
+#diensten-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 30px;
+}
+
+.dienst {
+    grid-column: 1fr;
+    justify-items: center;
+    padding: 30px;
+    line-height: 30px;
+}
+
+.button {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.button:hover {
+    background: $primary-color;
+    padding: 5px;
+}
+
+nav {
+    width: 100%;
+    background-color: $secondary-color;
+    padding: 20px 0px 20px 0px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+#about_container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    padding: 30px;
+}
+
+.about_photo {
+    width: 200px;
+    height: auto;
+    border-radius: 13px;
+    background-color: $secondary-color;
+    padding: 20px;
+
+}
+
+#head_photo {
+    grid-column: 2;
+    grid-row: 1 / 3;
+}
+
+.about_text {
+    grid-column: 1;
+}
+
+.about_subheading {
+    font-weight: bold;
+}
+
+.contact-introduction {
+    width: 60%;
+    padding-top: 40px;
+    margin: 0 auto;
+
+}
+
+#content-form-container {
+    display: flex;
+    width: 100%;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+#contact-information {
+    margin-right: 50px;
+}
+
+
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.form {
+    border: $secondary-color solid 2px;
+    border-radius: 5px;
+    margin: 10px;
+    width: 200%;
+
+}
+
+#submit-button {
+    border-radius: 5px;
+    background-color: $secondary-color;
+}
+
+@media (max-width:1160px) {
+    #content-form-container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+
+    }
+
+    .form {
+        width: 100%;
+        margin-right: 30px;
+    }
+
+    #contact-information {
+        margin-right: 30px;
+    }
+
+}
+
+@media (max-width:500px) {
+    #about_container {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto auto;
+        gap: 20px;
+        padding: 30px;
+    }
+
+    .about_photo {
+        width: 200px;
+        height: auto;
+        border-radius: 13px;
+        background-color: $secondary-color;
+        padding: 20px;
+
+    }
+
+    #head_photo {
+        grid-column: 2;
+        grid-row: 1 / 3;
+    }
+
+    .about_text {
+        grid-column: 1;
+    }
+
+    .about_subheading {
+        font-weight: bold;
+    }
+
+    @media (max-width:500px) {
+        #about_container {
+            display: flex;
+            flex-direction: column;
         }
     }
 
+    @media (max-width: 965px) {
+        header {
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
 
+        #slideshow {
+            width: 80%;
+        }
+
+        .foto-slideshow-container img {
+            object-fit: contain;
+            width: 70%;
+            height: auto;
+        }
+
+        #diensten-container {
+            grid-template-columns: 1fr;
+
+            .review_container {
+                width: 80%;
+                min-height: 250px;
+            }
+
+            .review_card {
+                width: 90%;
+            }
+
+            .next {
+                right: 0px;
+            }
+
+            .prev {
+                left: 0px;
+            }
+        }
+
+        @media (max-width:570px) {
+            .review_container {
+                width: 90%;
+                min-height: 200px;
+                padding: 20px 10px;
+            }
+
+            .review_card {
+                width: 90%;
+            }
+
+            .next {
+                right: 0px;
+            }
+
+            .prev {
+                left: 0px;
+            }
+
+            .prev,
+            .next {
+                padding: 12px;
+                font-size: 16px;
+            }
+        }
+    }
 }
