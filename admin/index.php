@@ -43,16 +43,19 @@
         </div>
 
 
-
+<!-- Bewerk modal -->
         <div class="modal-overlay" id="BewerkModal">
             <div class="modal">
                 <h2>bewerk</h2>
                 <form action="bewerk.php" method="POST">
+                
+                <input type="hidden" name="id" id="review_id">
+
                     <label for="naam">Naam</label>
-                    <input type="text" id="naam" name="naam" required>
+                    <input type="text" id="edit_naam" name="naam" required>
 
                     <label for="bericht">Bericht</label>
-                    <textarea id="bericht" name="bericht" rows="4" required></textarea>
+                    <textarea id="edit_bericht" name="bericht" rows="4" required></textarea>
 
                     <div class="modal-buttons">
                         <button type="submit" class="btn btn-edit">Versturen</button>
@@ -84,7 +87,11 @@
                         <td><?php echo $row['naam']; ?></td>
                         <td><?php echo $row['bericht']; ?></td>
                         <td>
-                            <button class="add" id="openBewerkModal">Bewerk</button>
+                            <button class="add openBewerkModal"
+                            data-id="<?= $row['id'] ?>"
+                            data-naam="<?= htmlspecialchars($row['naam']) ?>"
+                            data-bericht="<?= htmlspecialchars($row['bericht']) ?>">
+                            Bewerk</button>
                             <a href="verwijder.php?id=<?php echo $row['id']; ?>" class="btn btn-delete">Verwijder</a>
                         </td>
                     </tr>
@@ -105,9 +112,20 @@
             modal.classList.add('actief');
         });
 
-        document.getElementById('openBewerkModal').addEventListener('click', () => {
-            bewerkModal.classList.add('actief');
-        })
+        document.querySelectorAll('.openBewerkModal').forEach(button => {
+    button.addEventListener('click', () => {
+        document.getElementById('review_id').value =
+            button.dataset.id;
+
+        document.getElementById('edit_naam').value =
+            button.dataset.naam;
+
+        document.getElementById('edit_bericht').value =
+            button.dataset.bericht;
+
+        bewerkModal.classList.add('actief');
+    });
+});
 
         document.getElementById('closeModal').addEventListener('click', () => {
             modal.classList.remove('actief');
