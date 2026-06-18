@@ -42,6 +42,26 @@
             </div>
         </div>
 
+
+
+        <div class="modal-overlay" id="BewerkModal">
+            <div class="modal">
+                <h2>bewerk</h2>
+                <form action="bewerk.php" method="POST">
+                    <label for="naam">Naam</label>
+                    <input type="text" id="naam" name="naam" required>
+
+                    <label for="bericht">Bericht</label>
+                    <textarea id="bericht" name="bericht" rows="4" required></textarea>
+
+                    <div class="modal-buttons">
+                        <button type="submit" class="btn btn-edit">Versturen</button>
+                        <button type="button" class="btn btn-delete" id="closeBewerkModal">Annuleren</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
         <table>
             <thead>
                 <tr>
@@ -58,18 +78,18 @@
                 $result = $conn->query($query);
                 while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
 
-                    ?>
+                ?>
 
                     <tr>
                         <td><?php echo $row['naam']; ?></td>
                         <td><?php echo $row['bericht']; ?></td>
                         <td>
-                            <a href="bewerk.php?id=<?php echo $row['id']; ?>" class="btn btn-edit">Bewerk</a>
+                            <button class="add" id="openBewerkModal">Bewerk</button>
                             <a href="verwijder.php?id=<?php echo $row['id']; ?>" class="btn btn-delete">Verwijder</a>
                         </td>
                     </tr>
 
-                    <?php
+                <?php
                 }
 
                 ?>
@@ -79,13 +99,22 @@
 
     <script>
         const modal = document.getElementById('addModal');
+        const bewerkModal = document.getElementById('BewerkModal');
 
         document.getElementById('openModal').addEventListener('click', () => {
             modal.classList.add('actief');
         });
 
+        document.getElementById('openBewerkModal').addEventListener('click', () => {
+            bewerkModal.classList.add('actief');
+        })
+
         document.getElementById('closeModal').addEventListener('click', () => {
             modal.classList.remove('actief');
+        });
+
+        document.getElementById('closeBewerkModal').addEventListener('click', () => {
+            bewerkModal.classList.remove('actief');
         });
 
         // sluit ook als je buiten het venster klikt
