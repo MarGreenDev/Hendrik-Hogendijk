@@ -321,6 +321,20 @@ form {
     background-color: $secondary-color;
 }
 
+
+.map {
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
+    width: 100%;
+
+    iframe {
+        border: none;
+        border-radius: 10px;
+        max-width: 100%; // Zorgt dat de kaart niet buiten het scherm valt op mobiel
+    }
+}
+
 @media (max-width:1160px) {
     #content-form-container {
         flex-direction: column;

@@ -308,6 +308,18 @@ form {
   background-color: #239750;
 }
 
+.map {
+  display: flex;
+  justify-content: center;
+  margin: 30px auto;
+  width: 100%;
+}
+.map iframe {
+  border: none;
+  border-radius: 10px;
+  max-width: 100%;
+}
+
 @media (max-width: 1160px) {
   #content-form-container {
     flex-direction: column;
