@@ -215,10 +215,12 @@ h2 {
 
 .about_photo {
   width: 200px;
-  height: auto;
-  border-radius: 13px;
+  height: 200px;
+  border-radius: 100%;
   background-color: #239750;
   padding: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 #head_photo {
