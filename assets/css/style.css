@@ -585,7 +585,7 @@ tbody tr:hover {
   #diensten-container .prev {
     left: 0px;
   }
-}
+
 @media (max-width: 500px) and (max-width: 965px) and (max-width: 570px) {
   .review_container {
     width: 90%;
