@@ -263,11 +263,11 @@ nav {
 
 .about_photo {
     width: 200px;
-    height: auto;
-    border-radius: 13px;
+    height: 200px;
+    border-radius: 100%;
     background-color: $secondary-color;
     padding: 20px;
-
+    object-fit: cover;
 }
 
 #head_photo {
