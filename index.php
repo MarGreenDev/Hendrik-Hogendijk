@@ -1,16 +1,17 @@
 <?php
-include 'includes/header.php'
+include 'includes/connection.php';
+include 'includes/header.php';
     ?>
 <?php
-include 'includes/nav-bar.php'
+include 'includes/nav-bar.php';
     ?>
 
 <!-- slideshow -->
-<?php include 'includes/foto-slideshow.php' ?>
+<?php include 'includes/foto-slideshow.php'; ?>
 <!-- diensten -->
-<?php include 'includes/diensten.php' ?>
+<?php include 'includes/diensten.php'; ?>
 <!-- reviews -->
-<?php include 'includes/reviews.php' ?>
+<?php include 'includes/reviews.php'; ?>
 <script src="assets/js/script.js"></script>
 <?php
-include 'includes/footer.php' ?>
+include 'includes/footer.php'; ?>
