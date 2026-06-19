@@ -42,6 +42,29 @@
             </div>
         </div>
 
+
+<!-- Bewerk modal -->
+        <div class="modal-overlay" id="BewerkModal">
+            <div class="modal">
+                <h2>bewerk</h2>
+                <form action="bewerk.php" method="POST">
+                
+                <input type="hidden" name="id" id="review_id">
+
+                    <label for="naam">Naam</label>
+                    <input type="text" id="edit_naam" name="naam" required>
+
+                    <label for="bericht">Bericht</label>
+                    <textarea id="edit_bericht" name="bericht" rows="4" required></textarea>
+
+                    <div class="modal-buttons">
+                        <button type="submit" class="btn btn-edit">Versturen</button>
+                        <button type="button" class="btn btn-delete" id="closeBewerkModal">Annuleren</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
         <table>
             <thead>
                 <tr>
@@ -58,18 +81,22 @@
                 $result = $conn->query($query);
                 while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
 
-                    ?>
+                ?>
 
                     <tr>
                         <td><?php echo $row['naam']; ?></td>
                         <td><?php echo $row['bericht']; ?></td>
                         <td>
-                            <a href="bewerk.php?id=<?php echo $row['id']; ?>" class="btn btn-edit">Bewerk</a>
+                            <button class="add openBewerkModal"
+                            data-id="<?= $row['id'] ?>"
+                            data-naam="<?= htmlspecialchars($row['naam']) ?>"
+                            data-bericht="<?= htmlspecialchars($row['bericht']) ?>">
+                            Bewerk</button>
                             <a href="verwijder.php?id=<?php echo $row['id']; ?>" class="btn btn-delete">Verwijder</a>
                         </td>
                     </tr>
 
-                    <?php
+                <?php
                 }
 
                 ?>
@@ -77,8 +104,44 @@
         </table>
     </div>
 
-    <script src="../assets/js/admin.js"></script>
+    <script>
+        const modal = document.getElementById('addModal');
+        const bewerkModal = document.getElementById('BewerkModal');
 
+        document.getElementById('openModal').addEventListener('click', () => {
+            modal.classList.add('actief');
+        });
+
+        document.querySelectorAll('.openBewerkModal').forEach(button => {
+    button.addEventListener('click', () => {
+        document.getElementById('review_id').value =
+            button.dataset.id;
+
+        document.getElementById('edit_naam').value =
+            button.dataset.naam;
+
+        document.getElementById('edit_bericht').value =
+            button.dataset.bericht;
+
+        bewerkModal.classList.add('actief');
+    });
+});
+
+        document.getElementById('closeModal').addEventListener('click', () => {
+            modal.classList.remove('actief');
+        });
+
+        document.getElementById('closeBewerkModal').addEventListener('click', () => {
+            bewerkModal.classList.remove('actief');
+        });
+
+        // sluit ook als je buiten het venster klikt
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('actief');
+            }
+        });
+    </script>
 </body>
 
 </html>
