@@ -72,7 +72,7 @@ header h1 {
   width: 100%;
 }
 
-.review_slide.active {
+.review_slide .active {
   display: flex;
 }
 
@@ -558,6 +558,7 @@ tbody tr:hover {
   }
   #slideshow {
     width: 80%;
+    margin-bottom: 50px;
   }
   .foto-slideshow-container img {
     -o-object-fit: contain;

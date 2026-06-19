@@ -86,7 +86,7 @@ header {
     width: 100%;
 }
 
-.review_slide.active {
+.review_slide .active {
     display: flex;
 }
 
@@ -221,6 +221,7 @@ h2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 30px;
+    
 }
 
 .dienst {
@@ -334,202 +335,203 @@ form {
         max-width: 100%; // Zorgt dat de kaart niet buiten het scherm valt op mobiel
     }
 }
+
 #houder {
-  margin: 10px;
+    margin: 10px;
 }
 
 #houder h1 {
-  font-size: 2.5rem;
+    font-size: 2.5rem;
 }
 
 .table-wrapper {
-  overflow-x: auto;
-  /* zodat de tabel scrollt op kleine schermen */
+    overflow-x: auto;
+    /* zodat de tabel scrollt op kleine schermen */
 }
 
 table {
-  table-layout: fixed;
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 15px;
-  background-color: #FFFDF5;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background-color: #FFFDF5;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 thead {
-  background-color: #0C6D3C;
-  color: #FFFDF5;
+    background-color: #0C6D3C;
+    color: #FFFDF5;
 }
 
 th,
 td {
-  padding: 12px 15px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
 }
 
 tbody tr:nth-child(even) {
-  background-color: #f4f4f4;
+    background-color: #f4f4f4;
 }
 
 tbody tr:hover {
-  background-color: #e6f4ec;
+    background-color: #e6f4ec;
 }
 
 /* knoppen voor bewerken/verwijderen */
 
 .add {
-  display: inline-block;
-  padding: 12px 24px;
-  font-size: 18px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  font-family: inherit;
-  color: #FFFDF5;
-  background-color: #0C6D3C;
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    color: #FFFDF5;
+    background-color: #0C6D3C;
 }
 
 .add:hover {
-  background-color: #094f2c;
+    background-color: #094f2c;
 }
 
 .btn {
-  display: inline-block;
-  padding: 6px 12px;
-  border-radius: 5px;
-  border: none;
-  font-size: 14px;
-  cursor: pointer;
-  text-decoration: none;
-  color: #FFFDF5;
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #FFFDF5;
 }
 
 .btn-edit {
-  background-color: #0C6D3C;
+    background-color: #0C6D3C;
 }
 
 .btn-delete {
-  background-color: #c0392b;
+    background-color: #c0392b;
 }
 
 .btn-add {
-  background-color: #0C6D3C;
-  margin-bottom: 15px;
+    background-color: #0C6D3C;
+    margin-bottom: 15px;
 }
 
 /* ---------------pop up formulier in admin page */
 
 .modal-overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
 
 .modal-overlay.actief {
-  display: flex;
+    display: flex;
 }
 
 .modal {
-  background-color: #FFFDF5;
-  padding: 30px;
-  border-radius: 10px;
-  width: 90%;
-  max-width: 400px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: #FFFDF5;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .modal h2 {
-  margin-top: 0;
-  color: #0C6D3C;
+    margin-top: 0;
+    color: #0C6D3C;
 }
 
 .modal form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .modal label {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .modal input,
 .modal textarea {
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-family: inherit;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
 }
 
 .modal-buttons {
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-  margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
 }
 
 .bewerkModal-overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
 
 .bewerkModal-overlay.actief {
-  display: flex;
+    display: flex;
 }
 
 .bewerkModal {
-  background-color: #FFFDF5;
-  padding: 30px;
-  border-radius: 10px;
-  width: 90%;
-  max-width: 400px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: #FFFDF5;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .bewerkModal h2 {
-  margin-top: 0;
-  color: #0C6D3C;
+    margin-top: 0;
+    color: #0C6D3C;
 }
 
 .bewerkModal form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .bewerkModal label {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .bewerkModal input,
 .bewerkModal textarea {
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-family: inherit;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
 }
 
 .bewerkModal-buttons {
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-  margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
 }
 
 @media (max-width:1160px) {
@@ -596,8 +598,9 @@ tbody tr:hover {
             }
         }
 
-        #slideshow {
+        #slideshow {    
             width: 80%;
+            margin-bottom: 50px;
         }
 
         .foto-slideshow-container img {
