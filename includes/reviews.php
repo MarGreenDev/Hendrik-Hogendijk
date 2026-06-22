@@ -6,6 +6,10 @@ $result = $conn->query($sql);
 
 
 ?>
+    <div class="h2-banner">
+        <h2>Reviews</h2>
+    </div>
+
 <div class="review_container">
 
     <?php while ($row = $result->fetch(PDO::FETCH_ASSOC)) { ?>
