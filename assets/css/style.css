@@ -157,9 +157,11 @@ footer #open_dates {
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
+  margin-bottom: 20px;
   color: white;
   border-radius: 20px;
   width: 40%;
+  padding: 10px;
 }
 
 #slideshow h2 {
@@ -173,6 +175,9 @@ footer #open_dates {
 
 .foto-slideshow-container img {
   height: 300px;
+  width: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
   padding: 20px;
 }
 
@@ -563,10 +568,10 @@ tbody tr:hover {
     margin-bottom: 50px;
   }
   .foto-slideshow-container img {
-    -o-object-fit: contain;
-       object-fit: contain;
-    width: 70%;
-    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 200px;
+    height: 200px;
   }
   #diensten-container {
     grid-template-columns: 1fr;
@@ -604,5 +609,13 @@ tbody tr:hover {
   .next {
     padding: 12px;
     font-size: 16px;
+  }
+}
+@media (max-width: 800px) {
+  #slideshow {
+    width: 80%;
+  }
+  #diensten-container {
+    grid-template-columns: 1fr;
   }
 }/*# sourceMappingURL=style.css.map */
