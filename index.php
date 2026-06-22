@@ -12,5 +12,7 @@ include 'includes/nav-bar.php'
 <!-- reviews -->
 <?php include 'includes/reviews.php' ?>
 <script src="assets/js/script.js"></script>
+<script src="assets/javascript/reviewslide.js"></script>
+
 <?php
 include 'includes/footer.php' ?>
