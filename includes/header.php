@@ -13,8 +13,11 @@
     <header>
         <img src="./assets/images/logo.webp" alt="logo">
         <h1>Hendrik Hogendijk Hoveniers</h1>
+
         <div class="phone_section">
-            <img src="./assets/images/phone_icon.png" alt="phone">
-            <p class="phone_number">tel-06123465</p>
+            <a href="tel:06123465" class="call_button">
+                <img src="./assets/images/phone_icon.png" alt="phone">
+                <p class="phone_number">tel-06123465</p>
+            </a>
         </div>
     </header>
