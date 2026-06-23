@@ -9,14 +9,14 @@ body {
 }
 
 header {
-  background-color: #0C6D3C;
+  background-color: #0c6d3c;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   gap: 15px;
   padding: 10px;
-  color: #FFFDF5;
+  color: #fffdf5;
 }
 
 header .phone_number {
@@ -102,14 +102,14 @@ header h1 {
   width: auto;
   margin-top: -22px;
   padding: 16px;
-  color: #0C6D3C;
+  color: #0c6d3c;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  user-select: none;
   justify-self: center;
 }
 
@@ -129,12 +129,12 @@ header h1 {
 }
 
 footer {
-  background-color: #0C6D3C;
+  background-color: #0c6d3c;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 10px;
-  color: #FFFDF5;
+  color: #fffdf5;
   margin-top: 20px;
   bottom: 0;
 }
@@ -195,7 +195,7 @@ h2 {
 }
 
 .h2-banner {
-  background-color: #0C6D3C;
+  background-color: #0c6d3c;
   color: white;
   text-align: center;
   padding: 20px;
@@ -230,7 +230,7 @@ h2 {
 }
 
 .button:hover {
-  background: #0C6D3C;
+  background: #0c6d3c;
   padding: 5px;
 }
 
@@ -381,13 +381,13 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 15px;
-  background-color: #FFFDF5;
+  background-color: #fffdf5;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 thead {
-  background-color: #0C6D3C;
-  color: #FFFDF5;
+  background-color: #0c6d3c;
+  color: #fffdf5;
 }
 
 th,
@@ -415,8 +415,8 @@ tbody tr:hover {
   border: none;
   cursor: pointer;
   font-family: inherit;
-  color: #FFFDF5;
-  background-color: #0C6D3C;
+  color: #fffdf5;
+  background-color: #0c6d3c;
 }
 
 .add:hover {
@@ -431,11 +431,11 @@ tbody tr:hover {
   font-size: 14px;
   cursor: pointer;
   text-decoration: none;
-  color: #FFFDF5;
+  color: #fffdf5;
 }
 
 .btn-edit {
-  background-color: #0C6D3C;
+  background-color: #0c6d3c;
 }
 
 .btn-delete {
@@ -443,7 +443,7 @@ tbody tr:hover {
 }
 
 .btn-add {
-  background-color: #0C6D3C;
+  background-color: #0c6d3c;
   margin-bottom: 15px;
 }
 
@@ -467,7 +467,7 @@ tbody tr:hover {
 }
 
 .modal {
-  background-color: #FFFDF5;
+  background-color: #fffdf5;
   padding: 30px;
   border-radius: 10px;
   width: 90%;
@@ -477,7 +477,7 @@ tbody tr:hover {
 
 .modal h2 {
   margin-top: 0;
-  color: #0C6D3C;
+  color: #0c6d3c;
 }
 
 .modal form {
@@ -523,7 +523,7 @@ tbody tr:hover {
 }
 
 .bewerkModal {
-  background-color: #FFFDF5;
+  background-color: #fffdf5;
   padding: 30px;
   border-radius: 10px;
   width: 90%;
@@ -533,7 +533,7 @@ tbody tr:hover {
 
 .bewerkModal h2 {
   margin-top: 0;
-  color: #0C6D3C;
+  color: #0c6d3c;
 }
 
 .bewerkModal form {
@@ -560,31 +560,31 @@ tbody tr:hover {
   gap: 10px;
   margin-top: 10px;
 }
-  #slideshow {
-    width: 80%;
-  }
-  .foto-slideshow-container img {
-    -o-object-fit: contain;
-       object-fit: contain;
-    width: 70%;
-    height: auto;
-  }
-  #diensten-container {
-    grid-template-columns: 1fr;
-  }
-  #diensten-container .review_container {
-    width: 80%;
-    min-height: 250px;
-  }
-  #diensten-container .review_card {
-    width: 90%;
-  }
-  #diensten-container .next {
-    right: 0px;
-  }
-  #diensten-container .prev {
-    left: 0px;
-  }
+#slideshow {
+  width: 80%;
+}
+.foto-slideshow-container img {
+  -o-object-fit: contain;
+  object-fit: contain;
+  width: 70%;
+  height: auto;
+}
+#diensten-container {
+  grid-template-columns: 1fr;
+}
+#diensten-container .review_container {
+  width: 80%;
+  min-height: 250px;
+}
+#diensten-container .review_card {
+  width: 90%;
+}
+#diensten-container .next {
+  right: 0px;
+}
+#diensten-container .prev {
+  left: 0px;
+}
 
 @media (max-width: 500px) and (max-width: 965px) and (max-width: 570px) {
   .review_container {
@@ -606,4 +606,27 @@ tbody tr:hover {
     padding: 12px;
     font-size: 16px;
   }
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
+
+/* ---------------login page----- */
+.login-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-form h2{
+  text-align: center;
+}
+
+.login-form input{
+  width: 100%;
+  background: #ccc;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+}
