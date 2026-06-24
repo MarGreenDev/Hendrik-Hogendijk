@@ -3,24 +3,22 @@
 session_start();
 require_once '../includes/connection.php';
 
-if (isset($_POST[''])) {
-    $email = $_POST[''];
-    $password = $_POST[''];
+if (isset($_POST['login'])) {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
 
     $stmt = $conn->prepare("SELECT * FROM users WHERE email = :email");
     $stmt->execute(['email' => $email]);
 
-    $result = $stmt->fetch();
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    if ($result->rowCount() > 0) {
-        $user = $result->fetch(PDO::FETCH_ASSOC);
+    if ($user) {
         if (password_verify($password, $user['password'])) {
-            $_SESSION['name'] = $user['name'];
             $_SESSION['email'] = $user['email'];
 
             header("Location: admin.php");
+            exit();
         }
-        exit();
     }
 
     $_SESSION['login_error'] = 'incorrect email or password';
