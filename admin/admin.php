@@ -1,3 +1,12 @@
+<?php
+session_start();
+if (!isset ($_SESSION['email'])) {
+    header("location: index.php");
+    exit();
+}
+
+?>
+
 <?php include '../includes/connection.php'; ?>
 
 <!DOCTYPE html>
@@ -43,13 +52,13 @@
         </div>
 
 
-<!-- Bewerk modal -->
+        <!-- Bewerk modal -->
         <div class="modal-overlay" id="BewerkModal">
             <div class="modal">
                 <h2>bewerk</h2>
                 <form action="bewerk.php" method="POST">
-                
-                <input type="hidden" name="id" id="review_id">
+
+                    <input type="hidden" name="id" id="review_id">
 
                     <label for="naam">Naam</label>
                     <input type="text" id="edit_naam" name="naam" required>
@@ -81,22 +90,21 @@
                 $result = $conn->query($query);
                 while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
 
-                ?>
+                    ?>
 
                     <tr>
                         <td><?php echo $row['naam']; ?></td>
                         <td><?php echo $row['bericht']; ?></td>
                         <td>
-                            <button class="add openBewerkModal"
-                            data-id="<?= $row['id'] ?>"
-                            data-naam="<?= htmlspecialchars($row['naam']) ?>"
-                            data-bericht="<?= htmlspecialchars($row['bericht']) ?>">
-                            Bewerk</button>
+                            <button class="add openBewerkModal" data-id="<?= $row['id'] ?>"
+                                data-naam="<?= htmlspecialchars($row['naam']) ?>"
+                                data-bericht="<?= htmlspecialchars($row['bericht']) ?>">
+                                Bewerk</button>
                             <a href="verwijder.php?id=<?php echo $row['id']; ?>" class="btn btn-delete">Verwijder</a>
                         </td>
                     </tr>
 
-                <?php
+                    <?php
                 }
 
                 ?>
@@ -113,19 +121,19 @@
         });
 
         document.querySelectorAll('.openBewerkModal').forEach(button => {
-    button.addEventListener('click', () => {
-        document.getElementById('review_id').value =
-            button.dataset.id;
+            button.addEventListener('click', () => {
+                document.getElementById('review_id').value =
+                    button.dataset.id;
 
-        document.getElementById('edit_naam').value =
-            button.dataset.naam;
+                document.getElementById('edit_naam').value =
+                    button.dataset.naam;
 
-        document.getElementById('edit_bericht').value =
-            button.dataset.bericht;
+                document.getElementById('edit_bericht').value =
+                    button.dataset.bericht;
 
-        bewerkModal.classList.add('actief');
-    });
-});
+                bewerkModal.classList.add('actief');
+            });
+        });
 
         document.getElementById('closeModal').addEventListener('click', () => {
             modal.classList.remove('actief');

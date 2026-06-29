@@ -1,21 +1,8 @@
 <?php
 
-session_start();
-$errors = [
-    'login' => $_SESSION['login_error'] ?? '',
-];
-
-session_unset();
-
-function showError($error)
-{
-    return !empty($error) ? "<p class='error-message'>$error</p>" : '';
-}
-
-
 include '../includes/connection.php'
 
-?>
+    ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -33,7 +20,10 @@ include '../includes/connection.php'
             <div class="modal">
                 <form action="login_register.php" method="post">
                     <h2>inloggen</h2>
-                    <?php showError($errors['login']);?>
+                    <?php
+                    if (isset($_GET['inlog_error'])) {
+                        echo "<p class='error_msg'>" . $_GET['inlog_error'] . "</p>";
+                    } ?>
                     <input type="email" name="email" placeholder="Email" required>
                     <input type="password" name="password" placeholder="Password" required>
                     <button type="submit" name="login" class="btn btn-edit">login</button>
