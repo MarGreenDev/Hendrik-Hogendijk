@@ -1,8 +1,13 @@
 <?php
+session_start();
+if (!isset ($_SESSION['email'])) {
+    header("location: index.php");
+    exit();
+}
 
-include '../includes/connection.php'
+?>
 
-    ?>
+<?php include '../includes/connection.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,27 +15,26 @@ include '../includes/connection.php'
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>admin page</title>
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body>
+    <header>
+        <h1>welkom bij de admin pagina</h1>
+    </header>
+
+
     <div id="houder">
-        <div class="login-form">
+
+        <?php if (isset($_GET['delete_msg'])) {
+            echo "<h6>" . $_GET['delete_msg'] . "</h6>";
+        } ?>
+
+        <button class="add" id="openModal">voeg een review toe</button>
+
+        <div class="modal-overlay" id="addModal">
             <div class="modal">
-                <form action="login_register.php" method="post">
-                    <h2>inloggen</h2>
-                    <?php
-                    if (isset($_GET['inlog_error'])) {
-                        echo "<p class='error_msg'>" . $_GET['inlog_error'] . "</p>";
-                    } ?>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="password" name="password" placeholder="Password" required>
-                    <button type="submit" name="login" class="btn btn-edit">login</button>
-                </form>
-            </div>
-        </div>
-    </div>
                 <h2>Nieuwe review toevoegen</h2>
                 <form action="add_review.php" method="POST">
                     <label for="naam">Naam</label>
