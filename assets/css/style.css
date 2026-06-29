@@ -74,8 +74,23 @@ header h1 {
 
 .review_slide.active {
   display: flex;
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
 
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .username {
   justify-self: center;
   font-weight: bold;
