@@ -18,35 +18,39 @@ header {
   padding: 10px;
   color: #fffdf5;
 }
-
+header .call_button {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+header .call_button:hover {
+  color: #d5d5d5;
+}
 header .phone_number {
   font-size: 19px;
   margin: 0;
 }
-
 header .phone_section {
   display: flex;
   align-items: center;
   gap: 8px;
 }
-
 header .phone_section img {
   width: 30px;
   height: auto;
   margin-left: 0;
 }
-
 header .phone_section .phone_number {
   font-size: 16px;
 }
-
 header img {
   border-radius: 10px;
   max-width: 150px;
   height: auto;
   margin-left: 10px;
 }
-
 header h1 {
   font-size: 2.5rem;
 }
@@ -80,8 +84,23 @@ header h1 {
 
 .review_slide.active {
   display: flex;
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
 
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .username {
   justify-self: center;
   font-weight: bold;
@@ -138,25 +157,21 @@ footer {
   margin-top: 20px;
   bottom: 0;
 }
-
 footer img {
   width: 30px;
   height: auto;
   margin-left: 0;
 }
-
 footer img.logo {
   width: 150px;
   border-radius: 10px;
   margin-left: 10px;
 }
-
 footer .phone_section {
   display: flex;
   align-items: center;
   gap: 8px;
 }
-
 footer #open_dates {
   font-weight: bold;
 }
@@ -167,9 +182,12 @@ footer #open_dates {
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
+  margin-bottom: 20px;
   color: white;
   border-radius: 20px;
   width: 40%;
+  margin-bottom: 50px;
+  padding: 10px;
 }
 
 #slideshow h2 {
@@ -183,6 +201,9 @@ footer #open_dates {
 
 .foto-slideshow-container img {
   height: 300px;
+  width: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
   padding: 20px;
 }
 
@@ -254,10 +275,12 @@ nav {
 
 .about_photo {
   width: 200px;
-  height: auto;
-  border-radius: 13px;
+  height: 200px;
+  border-radius: 100%;
   background-color: #239750;
   padding: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 #head_photo {
@@ -308,61 +331,17 @@ form {
   background-color: #239750;
 }
 
-@media (max-width: 1160px) {
-  #content-form-container {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-  }
-  .form {
-    width: 100%;
-    margin-right: 30px;
-  }
-  #contact-information {
-    margin-right: 30px;
-  }
+.map {
+  display: flex;
+  justify-content: center;
+  margin: 30px auto;
+  width: 100%;
 }
-@media (max-width: 500px) {
-  #about_container {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: auto auto;
-    gap: 20px;
-    padding: 30px;
-  }
-  .about_photo {
-    width: 200px;
-    height: auto;
-    border-radius: 13px;
-    background-color: #239750;
-    padding: 20px;
-  }
-  #head_photo {
-    grid-column: 2;
-    grid-row: 1/3;
-  }
-  .about_text {
-    grid-column: 1;
-  }
-  .about_subheading {
-    font-weight: bold;
-  }
+.map iframe {
+  border: none;
+  border-radius: 10px;
+  max-width: 100%;
 }
-@media (max-width: 500px) and (max-width: 500px) {
-  #about_container {
-    display: flex;
-    flex-direction: column;
-  }
-}
-@media (max-width: 500px) and (max-width: 965px) {
-  header h1 {
-    font-size: 1.5rem;
-  }
-}
-
-/*# sourceMappingURL=style.css.map */
-
-/*------------ admin page--------------- */
 
 #houder {
   margin: 10px;
@@ -406,7 +385,6 @@ tbody tr:hover {
 }
 
 /* knoppen voor bewerken/verwijderen */
-
 .add {
   display: inline-block;
   padding: 12px 24px;
@@ -449,6 +427,7 @@ tbody tr:hover {
 
 /* ---------------pop up formulier in admin page----- */
 
+/* ---------------pop up formulier in admin page */
 .modal-overlay {
   display: none;
   position: fixed;
@@ -578,6 +557,82 @@ tbody tr:hover {
 }
 #diensten-container .review_card {
   width: 90%;
+
+@media (max-width: 1160px) {
+  #content-form-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .form {
+    width: 100%;
+    margin-right: 30px;
+  }
+  #contact-information {
+    margin-right: 30px;
+  }
+}
+@media (max-width: 500px) {
+  #about_container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    padding: 30px;
+  }
+  .about_photo {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    background-color: #239750;
+    padding: 20px;
+  }
+  #head_photo {
+    grid-column: 2;
+    grid-row: 1/3;
+  }
+  .about_text {
+    grid-column: 1;
+  }
+  .about_subheading {
+    font-weight: bold;
+  }
+}
+@media (max-width: 500px) and (max-width: 500px) {
+  #about_container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 500px) and (max-width: 965px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+  #slideshow {
+    width: 80%;
+  }
+  .foto-slideshow-container img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 200px;
+    height: 200px;
+  }
+  #diensten-container {
+    grid-template-columns: 1fr;
+  }
+  #diensten-container .review_container {
+    width: 80%;
+    min-height: 250px;
+  }
+  #diensten-container .review_card {
+    width: 90%;
+  }
+  #diensten-container .next {
+    right: 0px;
+  }
+  #diensten-container .prev {
+    left: 0px;
+  }
 }
 #diensten-container .next {
   right: 0px;
@@ -640,3 +695,12 @@ tbody tr:hover {
   margin-bottom: 20px;
 
 }
+}
+@media (max-width: 800px) {
+  #slideshow {
+    width: 80%;
+  }
+  #diensten-container {
+    grid-template-columns: 1fr;
+  }
+}/*# sourceMappingURL=style.css.map */

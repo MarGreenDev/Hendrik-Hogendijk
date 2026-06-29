@@ -32,6 +32,10 @@ include 'includes/nav-bar.php'
         </form>
     </div>
 </div>
+<div class="map">
+    <iframe src="https://www.google.com/maps/d/embed?mid=1FCESt8iqptvVH6nCaJEukoGvBh_PPdY&hl=nl&ehbc=2E312F" width="640"
+        height="480"></iframe>
+</div>
 
 <?php
 include 'includes/footer.php' ?>

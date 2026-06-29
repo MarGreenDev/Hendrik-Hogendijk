@@ -13,7 +13,6 @@
     <p>Zondag: Gesloten</p>
 
 </footer>
-<script src="assets/javascript/reviewslide.js"></script>
 </body>
 
 </html>
