@@ -560,6 +560,38 @@ tbody tr:hover {
     margin-top: 10px;
 }
 
+.login-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-form h2{
+  text-align: center;
+}
+
+.login-form input{
+  width: 100%;
+  background: #ccc;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.error_msg{
+  padding: 12px;
+  background: #f8d7da;
+  font-size: 16px;
+  color: #a42834;
+  text-align: center;
+  margin-bottom: 20px;
+
+}
+
 @media (max-width:1160px) {
     #content-form-container {
         flex-direction: column;
