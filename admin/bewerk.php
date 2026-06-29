@@ -15,5 +15,5 @@ $stmt = $conn->prepare("
 
 $stmt->execute([$naam, $bericht, $id]);
 
-header('location:index.php')
+header('location:admin.php')
 ?>

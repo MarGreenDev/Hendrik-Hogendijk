@@ -11,7 +11,7 @@ if (isset($_GET['id'])) {
     if (!$result) {
         die("query failed" . $e->getMessage());
     }else{
-        header('location:index.php?delete_msg= je hebt met succes een review verwijderd');
+        header('location:admin.php?delete_msg= je hebt met succes een review verwijderd');
     }
 }
 
