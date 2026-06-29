@@ -95,8 +95,20 @@ header {
     width: 100%;
 }
 
-.review_slide .active {
+.review_slide.active {
     display: flex;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+   .fade {
+
+  animation-name: fade;
+  animation-duration: 1.5s;
+
+}
+@keyframes fade {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
 }
 
 .username {
@@ -183,10 +195,12 @@ footer {
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
+    margin-bottom: 20px;
     color: white;
     border-radius: 20px;
     width: 40%;
     margin-bottom: 50px;
+    padding: 10px;
 }
 
 #slideshow h2 {
@@ -201,6 +215,8 @@ footer {
 
 .foto-slideshow-container img {
     height: 300px;
+    width: 300px;
+    object-fit: cover;
     padding: 20px;
 }
 
@@ -614,9 +630,9 @@ tbody tr:hover {
         }
 
         .foto-slideshow-container img {
-            object-fit: contain;
-            width: 70%;
-            height: auto;
+            object-fit: cover;
+            width: 200px;
+            height: 200px;
         }
 
         #diensten-container {
@@ -665,5 +681,15 @@ tbody tr:hover {
                 font-size: 16px;
             }
         }
+    }
+}
+
+@media (max-width:800px) {
+    #slideshow {
+        width: 80%;
+    }
+
+    #diensten-container {
+        grid-template-columns: 1fr;
     }
 }
