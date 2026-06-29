@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->bindParam(':bericht', $bericht);
     $stmt->execute();
 
-    header('Location: index.php');
+    header('Location: admin.php');
     exit;
 }
 ?>
