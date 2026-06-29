@@ -23,7 +23,16 @@ header {
     padding: 10px;
     color: #FFFDF5;
 
-
+.call_button{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.call_button:hover{
+    color: #d5d5d5;
+}
 
     .phone_number {
         font-size: 19px;
@@ -190,6 +199,7 @@ footer {
     color: white;
     border-radius: 20px;
     width: 40%;
+    margin-bottom: 50px;
     padding: 10px;
 }
 
@@ -581,7 +591,7 @@ tbody tr:hover {
     .about_photo {
         width: 200px;
         height: auto;
-        border-radius: 13px;
+        border-radius: 50%;
         background-color: $secondary-color;
         padding: 20px;
 
@@ -616,7 +626,7 @@ tbody tr:hover {
 
         #slideshow {    
             width: 80%;
-            margin-bottom: 50px;
+            
         }
 
         .foto-slideshow-container img {
