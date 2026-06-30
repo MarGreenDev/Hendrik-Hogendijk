@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset ($_SESSION['email'])) {
+if (!isset($_SESSION['email'])) {
     header("location: index.php");
     exit();
 }
@@ -33,6 +33,7 @@ if (!isset ($_SESSION['email'])) {
 
         <button class="add" id="openModal">voeg een review toe</button>
 
+        <!-- voeg revieuw toe modal -->
         <div class="modal-overlay" id="addModal">
             <div class="modal">
                 <h2>Nieuwe review toevoegen</h2>
@@ -44,7 +45,7 @@ if (!isset ($_SESSION['email'])) {
                     <textarea id="bericht" name="bericht" rows="4" required></textarea>
 
                     <div class="modal-buttons">
-                        <button type="submit" class="btn btn-edit">Versturen</button>
+                        <button type="submit" class="btn btn-edit">Bevestigen</button>
                         <button type="button" class="btn btn-delete" id="closeModal">Annuleren</button>
                     </div>
                 </form>
