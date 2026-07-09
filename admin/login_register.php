@@ -11,8 +11,6 @@ if (isset($_POST['login'])) {
     $stmt->execute(['email' => $email]);
 
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
-    // $hash = password_hash('hovenier', PASSWORD_DEFAULT);
-
 
     if ($user) {
         if (password_verify($password, $user['password'])) {

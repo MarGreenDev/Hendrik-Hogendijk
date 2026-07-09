@@ -45,7 +45,7 @@ if (!isset($_SESSION['email'])) {
                     <textarea id="bericht" name="bericht" rows="4" required></textarea>
 
                     <div class="modal-buttons">
-                        <button type="submit" class="btn btn-edit">Bevestigen</button>
+                        <button type="submit" name="bevestigen" class="btn btn-edit">Bevestigen</button>
                         <button type="button" class="btn btn-delete" id="closeModal">Annuleren</button>
                     </div>
                 </form>

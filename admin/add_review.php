@@ -1,7 +1,7 @@
 <?php
 include '../includes/connection.php';
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if (isset($_POST['bevestigen'])) {
     $naam = $_POST['naam'];
     $bericht = $_POST['bericht'];
 
